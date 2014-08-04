@@ -3,7 +3,7 @@
 Plugin Name: IW Latest Posts
 Plugin URI: http://www.inspiredworx.com/
 Description: A simple plugin to display your latest blog posts.
-Version: 0.0.1
+Version: 1.0.0
 Author: Huw Rowlands
 Author URI: http://www.inspiredworx.com/
 License: GPL2
@@ -55,12 +55,12 @@ if( $instance) {
 		</option>
 		<?php
 			$pages = get_pages();
-			foreach ($pages as $page) { ?>
-				<option id="<?php echo $page->post_title; ?>" value="<?php echo get_page_link($page->ID); ?>"><?php echo $page->post_title; ?></option>
-			  <?php //echo '<option value="' . get_page_link($page->ID) . '" id="' . $page->post_title . '"', $read_more_link == $page ? ' selected="selected"' : '', '>', $page->post_title, '</option>';
-				 }
+			foreach ($pages as $page) { 
+				echo '<option value="'.get_page_link($page->ID).'" id="' . $page->post_title . '"', $read_more_link == get_page_link($page->ID) ? ' selected="selected"' : '', '>', $page->post_title, '</option>';
+				}
 			?>
 	</select>
+
 </p>
 
 <p>
