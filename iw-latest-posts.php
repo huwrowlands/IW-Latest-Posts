@@ -9,7 +9,6 @@ Author URI: http://www.inspiredworx.com/
 License: GPL2
 */
 ?>
-
 <?php
 
 class iw_latest_posts_plugin extends WP_Widget {
@@ -18,7 +17,7 @@ class iw_latest_posts_plugin extends WP_Widget {
     function iw_latest_posts_plugin() {
         parent::WP_Widget(false, $name = __('IW Latest Posts', 'iw_widget_plugin') );
     }
-
+    
 // widget form creation
 function form($instance) {
 
@@ -124,5 +123,5 @@ function widget($args, $instance) {
 
 // register widget
 add_action('widgets_init', create_function('', 'return register_widget("iw_latest_posts_plugin");'));
-	
+
 ?>
