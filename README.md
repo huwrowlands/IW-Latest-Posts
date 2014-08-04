@@ -1,6 +1,8 @@
 IW-Latest-Posts
 ===============
 
+V 1.0.0
+
 A simple plugin to display your latest blog posts.
 
 ===============
